@@ -46,6 +46,7 @@ class AptPlugin implements Plugin<Project> {
     }
     project.tasks.withType(JavaCompile, cl)
     project.tasks.withType(GroovyCompile, cl)
+    project.tasks.withType(Class.forName('aspectj.Ajc'), cl)
 
     project.plugins.withType(JavaBasePlugin) {
       def javaConvention = project.convention.getPlugin(JavaPluginConvention)
